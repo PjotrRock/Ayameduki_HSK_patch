@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[@Name="HAR_EL_ArtifactBase"]/statBases</xpath>
+		<value>
+			<statBases>
+				<Mass>2.5</Mass>
+			</statBases>
+		</value>
+	</Operation>
+</Patch>

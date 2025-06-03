@@ -1,0 +1,681 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Patch>
+
+	<Operation Class="SK.PatchOperationReplaceExtended">
+		<xpath>Defs/ThingDef[defName="Gun_AssaultRifle_NM"]</xpath>
+		<value>
+			<costList>
+				<Plasteel>70</Plasteel>
+				<ComponentIndustrial>6</ComponentIndustrial>
+				<Carbon>60</Carbon>
+				<Plastic>24</Plastic>
+				<BioMicrochips>4</BioMicrochips>
+				<HAR_IA_Item_c>4</HAR_IA_Item_c>
+			</costList>
+		</value>
+	</Operation>
+
+	<Operation Class="SK.PatchOperationReplaceExtended">
+		<xpath>Defs/ThingDef[defName="HAR_NM_Weapon_Sword_a"]</xpath>
+		<value>
+			<costList>
+				<ComponentIndustrial>3</ComponentIndustrial>
+				<Carbon>40</Carbon>
+				<Plastic>8</Plastic>
+			</costList>
+			<costStuffCount>60</costStuffCount>
+			<stuffCategories>
+				<li>StrongMetallic</li>
+			</stuffCategories>
+		</value>
+	</Operation>
+
+
+	<Operation Class="SK.PatchOperationReplaceExtended">
+		<xpath>Defs/ThingDef[defName="HAR_NM_Weapon_Gun_b"]</xpath>
+		<value>
+			<costList>
+				<Shotgun_Component>1</Shotgun_Component>
+				<Weapon_Parts>3</Weapon_Parts>
+				<ComponentIndustrial>3</ComponentIndustrial>
+				<Plasteel>40</Plasteel>
+				<Plastic>5</Plastic>
+			</costList>
+		</value>
+	</Operation>
+
+	<Operation Class="SK.PatchOperationReplaceExtended">
+		<xpath>Defs/ThingDef[defName="HAR_NM_Weapon_Gun_a"]</xpath>
+		<value>
+			<costList>
+				<Heavy_Component>1</Heavy_Component>
+				<Weapon_Parts>5</Weapon_Parts>
+				<ComponentIndustrial>7</ComponentIndustrial>
+				<Carbon>8</Carbon>
+				<Plasteel>60</Plasteel>
+				<Plastic>5</Plastic>
+			</costList>
+		</value>
+	</Operation>
+	
+	<!-- ==========  Geist Knife  =========== -->
+
+	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+		<defName>Geist_Knife</defName>
+		<statBases>
+			<SightsEfficiency>0.70</SightsEfficiency>
+			<ShotSpread>1.5</ShotSpread>
+			<SwayFactor>0.85</SwayFactor>
+			<Bulk>1</Bulk>
+			<Mass>2</Mass>
+			<RangedWeapon_Cooldown>0.3</RangedWeapon_Cooldown>
+		</statBases>
+
+		<Properties>
+			<recoilAmount>0</recoilAmount>
+			<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>Geist_Knife_Projectile</defaultProjectile>
+			<warmupTime>0.3</warmupTime>
+			<range>20</range>
+			<soundCast>Interact_BeatFire</soundCast>
+			<rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+		</Properties>
+		<FireModes>
+		</FireModes>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="Geist_Knife"]/statBases</xpath>
+		<value>
+			<MeleeCounterParryBonus>0.15</MeleeCounterParryBonus>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="Geist_Knife"]</xpath>
+		<value>
+			<equippedStatOffsets>
+				<MeleeCritChance>0.5</MeleeCritChance>
+				<MeleeParryChance>0.15</MeleeParryChance>
+				<MeleeDodgeChance>0.05</MeleeDodgeChance>
+			</equippedStatOffsets>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Geist_Knife"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>handle</label>
+					<capacities>
+						<li>Poke</li>
+					</capacities>
+					<power>1</power>
+					<cooldownTime>1.26</cooldownTime>
+					<armorPenetrationBlunt>0.250</armorPenetrationBlunt>
+					<linkedBodyPartsGroup>Handle</linkedBodyPartsGroup>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>blade</label>
+					<capacities>
+						<li>Cut</li>
+					</capacities>
+					<power>10</power>
+					<cooldownTime>1.18</cooldownTime>
+					<armorPenetrationBlunt>0.36</armorPenetrationBlunt>
+					<armorPenetrationSharp>0.32</armorPenetrationSharp>
+					<linkedBodyPartsGroup>Blade</linkedBodyPartsGroup>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>point</label>
+					<capacities>
+						<li>Stab</li>
+					</capacities>
+					<power>11</power>
+					<cooldownTime>1.26</cooldownTime>
+					<chanceFactor>1.33</chanceFactor>
+					<armorPenetrationBlunt>0.25</armorPenetrationBlunt>
+					<armorPenetrationSharp>0.42</armorPenetrationSharp>
+					<linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
+				</li>
+			</tools>
+		</value>
+	</Operation>
+
+	<!-- ==========  Larva Knife  =========== -->
+
+	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+		<defName>Larva_SKnife</defName>
+		<statBases>
+			<SightsEfficiency>1.25</SightsEfficiency>
+			<ShotSpread>0.20</ShotSpread>
+			<SwayFactor>1.25</SwayFactor>
+			<Bulk>1</Bulk>
+			<Mass>2</Mass>
+			<RangedWeapon_Cooldown>1.26</RangedWeapon_Cooldown>
+		</statBases>
+
+		<Properties>
+			<recoilAmount>0</recoilAmount>
+			<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>Larva_SKnife_Projectile</defaultProjectile>
+			<warmupTime>0.6</warmupTime>
+			<range>62</range>
+			<soundCast>Interact_BeatFire</soundCast>
+			<rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+		</Properties>
+		<FireModes>
+		</FireModes>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="Larva_SKnife"]/statBases</xpath>
+		<value>
+			<MeleeCounterParryBonus>0.15</MeleeCounterParryBonus>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="Larva_SKnife"]</xpath>
+		<value>
+			<equippedStatOffsets>
+				<MeleeCritChance>0.5</MeleeCritChance>
+				<MeleeParryChance>0.15</MeleeParryChance>
+				<MeleeDodgeChance>0.05</MeleeDodgeChance>
+			</equippedStatOffsets>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Larva_SKnife"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>handle</label>
+					<capacities>
+						<li>Poke</li>
+					</capacities>
+					<power>1</power>
+					<cooldownTime>1.26</cooldownTime>
+					<armorPenetrationBlunt>0.250</armorPenetrationBlunt>
+					<linkedBodyPartsGroup>Handle</linkedBodyPartsGroup>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>blade</label>
+					<capacities>
+						<li>Cut</li>
+					</capacities>
+					<power>10</power>
+					<cooldownTime>1.18</cooldownTime>
+					<armorPenetrationBlunt>0.36</armorPenetrationBlunt>
+					<armorPenetrationSharp>0.32</armorPenetrationSharp>
+					<linkedBodyPartsGroup>Blade</linkedBodyPartsGroup>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>point</label>
+					<capacities>
+						<li>Stab</li>
+					</capacities>
+					<power>11</power>
+					<cooldownTime>1.26</cooldownTime>
+					<chanceFactor>1.33</chanceFactor>
+					<armorPenetrationBlunt>0.25</armorPenetrationBlunt>
+					<armorPenetrationSharp>0.42</armorPenetrationSharp>
+					<linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
+				</li>
+			</tools>
+		</value>
+	</Operation>
+
+	<!-- ==========  Rugeiyo Pila  =========== -->
+
+	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+		<defName>Rugeiyu_Pila</defName>
+		<statBases>
+			<SightsEfficiency>0.85</SightsEfficiency>
+			<ShotSpread>2</ShotSpread>
+			<SwayFactor>1.85</SwayFactor>
+			<Bulk>10</Bulk>
+			<Mass>4</Mass>
+			<RangedWeapon_Cooldown>1.19</RangedWeapon_Cooldown>
+		</statBases>
+
+		<Properties>
+			<recoilAmount>0</recoilAmount>
+			<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>Rugeiyu_Pilum_Thrown</defaultProjectile>
+			<warmupTime>0.6</warmupTime>
+			<burstShotCount>5</burstShotCount>
+			<ticksBetweenBurstShots>20</ticksBetweenBurstShots>
+			<range>51</range>
+			<soundCast>Interact_BeatFire</soundCast>
+			<rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+		</Properties>
+		<FireModes>
+			<aimedBurstShotCount>3</aimedBurstShotCount>
+			<aiUseBurstMode>FALSE</aiUseBurstMode>
+			<aiAimMode>Snapshot</aiAimMode>
+		</FireModes>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="Rugeiyu_Pila"]/statBases</xpath>
+		<value>
+			<MeleeCounterParryBonus>1.08</MeleeCounterParryBonus>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[defName="Rugeiyu_Pila"]</xpath>
+		<value>
+			<equippedStatOffsets>
+				<MeleeCritChance>0.17</MeleeCritChance>
+				<MeleeParryChance>1.45</MeleeParryChance>
+				<MeleeDodgeChance>0.9</MeleeDodgeChance>
+			</equippedStatOffsets>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Rugeiyu_Pila"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>shaft</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>7</power>
+					<cooldownTime>1.35</cooldownTime>
+					<chanceFactor>0.15</chanceFactor>
+					<armorPenetrationBlunt>2.25</armorPenetrationBlunt>
+					<linkedBodyPartsGroup>Shaft</linkedBodyPartsGroup>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>shaft</label>
+					<capacities>
+						<li>Poke</li>
+					</capacities>
+					<power>4</power>
+					<cooldownTime>1.78</cooldownTime>
+					<chanceFactor>0.05</chanceFactor>
+					<armorPenetrationBlunt>1</armorPenetrationBlunt>
+					<linkedBodyPartsGroup>Point</linkedBodyPartsGroup>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>head</label>
+					<capacities>
+						<li>Stab</li>
+					</capacities>
+					<power>18</power>
+					<cooldownTime>1.19</cooldownTime>
+					<chanceFactor>1.00</chanceFactor>
+					<armorPenetrationBlunt>2.25</armorPenetrationBlunt>
+					<armorPenetrationSharp>1.5</armorPenetrationSharp>
+					<linkedBodyPartsGroup>Head</linkedBodyPartsGroup>
+				</li>
+			</tools>
+		</value>
+	</Operation>
+
+	<!-- ==========  Wild Hunt  =========== -->
+
+	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+		<defName>Nearmaere_WildHunt</defName>
+		<statBases>
+			<SightsEfficiency>1.00</SightsEfficiency>
+			<ShotSpread>0.20</ShotSpread>
+			<SwayFactor>1.85</SwayFactor>
+			<Bulk>10</Bulk>
+			<Mass>4</Mass>
+			<RangedWeapon_Cooldown>40</RangedWeapon_Cooldown>
+		</statBases>
+
+		<Properties>
+			<recoilAmount>0</recoilAmount>
+			<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>Nearmaere_WildHunt_B</defaultProjectile>
+			<warmupTime>20</warmupTime>
+			<range>86</range>
+			<soundCast>InfernoCannon_Fire</soundCast>
+			<soundCastTail>GunTail_Light</soundCastTail>
+			<muzzleFlashScale>14</muzzleFlashScale>
+			<rangedFireRulepack>Combat_RangedFire_Thrown</rangedFireRulepack>
+			<targetParams>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+			<onlyManualCast>true</onlyManualCast>
+			<ignorePartialLoSBlocker>true</ignorePartialLoSBlocker>
+		</Properties>
+		<FireModes>
+		</FireModes>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Nearmaere_WildHunt"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>head</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>5</power>
+					<cooldownTime>2.85</cooldownTime>
+					<chanceFactor>0.30</chanceFactor>
+					<armorPenetrationBlunt>1.69</armorPenetrationBlunt>
+					<linkedBodyPartsGroup>Head</linkedBodyPartsGroup>
+				</li>
+			</tools>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Gun_AssaultRifle_NM"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>stock</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>8</power>
+					<cooldownTime>1.55</cooldownTime>
+					<chanceFactor>1.5</chanceFactor>
+					<armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+					<linkedBodyPartsGroup>Stock</linkedBodyPartsGroup>
+				</li>
+
+				<li Class="CombatExtended.ToolCE">
+					<label>barrel</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>5</power>
+					<cooldownTime>2.2</cooldownTime>
+					<armorPenetrationBlunt>1.630</armorPenetrationBlunt>
+					<linkedBodyPartsGroup>Barrel</linkedBodyPartsGroup>
+				</li>
+
+				<li Class="CombatExtended.ToolCE">
+					<label>muzzle</label>
+					<capacities>
+						<li>Poke</li>
+					</capacities>
+					<power>8</power>
+					<cooldownTime>1.55</cooldownTime>
+					<armorPenetrationBlunt>2.755</armorPenetrationBlunt>
+					<linkedBodyPartsGroup>Muzzle</linkedBodyPartsGroup>
+				</li>
+			</tools>
+		</value>
+	</Operation>
+
+	<Operation Class="CombatExtended.PatchOperationMakeGunCECompatible">
+		<defName>Gun_AssaultRifle_NM</defName>
+		<statBases>
+			<SightsEfficiency>1</SightsEfficiency>
+			<Bulk>6.65</Bulk>
+			<ShotSpread>1</ShotSpread>
+			<SwayFactor>1.3</SwayFactor>
+			<Mass>3.5</Mass>
+			<RangedWeapon_Cooldown>0.36</RangedWeapon_Cooldown>
+		</statBases>
+
+		<Properties>
+			<recoilAmount>3</recoilAmount>
+			<verbClass>CombatExtended.Verb_ShootCE</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>Bullet_127x55mm_FMJ</defaultProjectile>
+			<warmupTime>5</warmupTime>
+			<range>52</range>
+			<burstShotCount>10</burstShotCount>
+			<ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+			<soundCast>Shot_AssaultRifle</soundCast>
+			<soundCastTail>GunTail_Medium</soundCastTail>
+			<muzzleFlashScale>11</muzzleFlashScale>
+		</Properties>
+
+		<AmmoUser>
+			<magazineSize>30</magazineSize>
+			<reloadTime>5.2</reloadTime>
+			<ammoSet>AmmoSet_145x114mm</ammoSet>
+		</AmmoUser>
+
+		<FireModes>
+			<aimedBurstShotCount>5</aimedBurstShotCount>
+			<aiUseBurstMode>TRUE</aiUseBurstMode>
+			<aiAimMode>AimedShot</aiAimMode>
+		</FireModes>
+	</Operation>
+
+	<Operation Class="PatchOperationSequence">
+		
+		<operations>
+			<li Class="PatchOperationFindMod">
+			<mods><li>[Aya]Nearmare Race</li></mods>
+			<match Class="PatchOperationSequence">
+			<operations>
+
+                <!--========= Mishmar Edge =========-->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="HAR_NM_Weapon_Sword_a"]/tools</xpath>
+                    <value>
+                        <tools>
+                            <li Class="CombatExtended.ToolCE">
+                                <label>handle</label>
+                                <capacities>
+                                <li>Blunt</li>
+                                </capacities>
+                                <power>6</power>
+                                <cooldownTime>1.2</cooldownTime>
+								<chanceFactor>0.1</chanceFactor>
+                                <armorPenetrationSharp>0</armorPenetrationSharp>
+								<armorPenetrationBlunt>6.5</armorPenetrationBlunt>
+                            </li>
+                            <li Class="CombatExtended.ToolCE">
+                                <label>point</label>
+                                <capacities>
+                                <li>Stab</li>
+                                </capacities>
+                                <power>13</power>
+                                <cooldownTime>1.3</cooldownTime>
+								<chanceFactor>1.15</chanceFactor>
+                                <armorPenetrationSharp>22</armorPenetrationSharp>
+								<armorPenetrationBlunt>2.88</armorPenetrationBlunt>
+                            </li>
+                            <li Class="CombatExtended.ToolCE">
+                                <label>edge</label>
+                                <capacities>
+                                <li>Cut</li>
+                                </capacities>
+                                <power>18</power>
+                                <cooldownTime>1.3</cooldownTime>
+								<chanceFactor>1.4</chanceFactor>
+                                <armorPenetrationSharp>16</armorPenetrationSharp>
+								<armorPenetrationBlunt>1.28</armorPenetrationBlunt>
+                            </li>
+                            </tools>
+                    </value>
+				</li>
+				
+                <!--========= Ts'vaot Rifle =========-->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="HAR_NM_Weapon_Gun_a"]/tools</xpath>
+                    <value>
+                        <tools>
+                            <li Class="CombatExtended.ToolCE">
+                                <label>銃剣</label>
+                                <capacities>
+                                    <li>Scratch</li>
+                                </capacities>
+                                <power>18</power>
+                                <cooldownTime>1.2</cooldownTime>
+                                <armorPenetrationSharp>12</armorPenetrationSharp>
+								<armorPenetrationBlunt>2</armorPenetrationBlunt>
+                            </li>
+                        </tools>
+                    </value>
+				</li>
+
+                <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+					<defName>HAR_NM_Weapon_Gun_a</defName>
+                    <statBases>
+                        <SightsEfficiency>1</SightsEfficiency>
+                        <Bulk>6.65</Bulk>
+                        <ShotSpread>1</ShotSpread>
+                        <SwayFactor>1.3</SwayFactor>
+                        <Mass>3.5</Mass>
+                        <RangedWeapon_Cooldown>0.25</RangedWeapon_Cooldown>
+                    </statBases>
+
+                    <Properties>
+                        <recoilAmount>3</recoilAmount>
+                        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                        <hasStandardCommand>true</hasStandardCommand>
+                        <defaultProjectile>Bullet_AssaultRifle_NM_a</defaultProjectile>
+                        <warmupTime>2</warmupTime>
+                        <range>52</range>
+                        <burstShotCount>16</burstShotCount>
+                        <ticksBetweenBurstShots>4</ticksBetweenBurstShots>
+                        <soundCast>Shot_AssaultRifle</soundCast>
+                        <soundCastTail>GunTail_Medium</soundCastTail>
+                        <muzzleFlashScale>9</muzzleFlashScale>
+                    </Properties>
+
+                    <AmmoUser>
+                        <magazineSize>60</magazineSize>
+                        <reloadTime>5.2</reloadTime>
+                        <ammoSet>AmmoSet_556x45mmNATO</ammoSet>
+                    </AmmoUser>
+
+                    <FireModes>
+                        <aimedBurstShotCount>6</aimedBurstShotCount>
+                        <aiUseBurstMode>TRUE</aiUseBurstMode>
+                        <aiAimMode>AimedShot</aiAimMode>
+                    </FireModes>
+                    
+				</li>
+
+                <!--========= Ts'vaot Shotgun =========-->
+				<li Class="PatchOperationReplace">
+					<xpath>Defs/ThingDef[defName="HAR_NM_Weapon_Gun_b"]/tools</xpath>
+                    <value>
+                        <tools>
+                            <li Class="CombatExtended.ToolCE">
+                                <label>stock</label>
+                                <capacities>
+                                <li>Blunt</li>
+                                </capacities>
+                                <power>9</power>
+                                <cooldownTime>2</cooldownTime>
+                                <armorPenetrationSharp>0</armorPenetrationSharp>
+								<armorPenetrationBlunt>0.5</armorPenetrationBlunt>
+                            </li>
+                            <li Class="CombatExtended.ToolCE">
+                                <label>barrel</label>
+                                <capacities>
+                                <li>Blunt</li>
+                                <li>Poke</li>
+                                </capacities>
+                                <power>9</power>
+                                <cooldownTime>2</cooldownTime>
+                                <armorPenetrationSharp>0</armorPenetrationSharp>
+								<armorPenetrationBlunt>0.5</armorPenetrationBlunt>
+                            </li>
+                        </tools>
+                    </value>
+				</li>
+
+                <li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+					<defName>HAR_NM_Weapon_Gun_b</defName>
+                    <statBases>
+                        <SightsEfficiency>1</SightsEfficiency>
+                        <Bulk>10</Bulk>
+                        <ShotSpread>0.2</ShotSpread>
+                        <SwayFactor>1.35</SwayFactor>
+                        <Mass>3.5</Mass>
+                        <RangedWeapon_Cooldown>0.99</RangedWeapon_Cooldown>
+                    </statBases>
+
+                    <Properties>
+                        <recoilAmount>3</recoilAmount>
+                        <verbClass>CombatExtended.Verb_ShootCE</verbClass>
+                        <hasStandardCommand>true</hasStandardCommand>
+                        <defaultProjectile>Bullet_Shotgun_NM</defaultProjectile>
+                        <warmupTime>1.5</warmupTime>
+                        <range>20</range>
+                        <burstShotCount>12</burstShotCount>
+                        <ticksBetweenBurstShots>0.01</ticksBetweenBurstShots>
+                        <soundCast>Shot_Shotgun</soundCast>
+                        <soundCastTail>GunTail_Heavy</soundCastTail>
+                        <muzzleFlashScale>9</muzzleFlashScale>
+                    </Properties>
+
+                    <AmmoUser>
+                        <magazineSize>12</magazineSize>
+                        <reloadTime>4.5</reloadTime>
+                        <ammoSet>AmmoSet_12Gauge</ammoSet>
+                    </AmmoUser>
+
+                    <FireModes>
+                        <aiUseBurstMode>FALSE</aiUseBurstMode>
+                        <aiAimMode>Snapshot</aiAimMode>
+                    </FireModes>
+                    
+				</li>
+
+                <!--========= Shofet Railgun =========-->
+                <!--This is already patched by base CE but functionality doesn't match what it originally in the mod. 
+                    This patch here makes it work more inline with the mod description and how it originally works without CE-->
+                
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="Gun_AssaultRifle_NM"]/statBases/ShotSpread</xpath>
+                    <value>
+                        <ShotSpread>5</ShotSpread>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="Gun_AssaultRifle_NM"]/verbs/li[@Class="CombatExtended.VerbPropertiesCE"]/defaultProjectile</xpath>
+                    <value>
+                        <defaultProjectile>Bullet_AssaultRifle_NM</defaultProjectile>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="Gun_AssaultRifle_NM"]/verbs/li[@Class="CombatExtended.VerbPropertiesCE"]/burstShotCount</xpath>
+                    <value>
+                        <burstShotCount>25</burstShotCount>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="Gun_AssaultRifle_NM"]/verbs/li[@Class="CombatExtended.VerbPropertiesCE"]/soundCast</xpath>
+                    <value>
+                        <soundCast>HAR_NM_Sound_Rifle</soundCast>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationReplace">
+                    <xpath>Defs/ThingDef[defName="Gun_AssaultRifle_NM"]/verbs/li[@Class="CombatExtended.VerbPropertiesCE"]/soundCastTail</xpath>
+                    <value>
+                        <soundCastTail>GunTail_Heavy</soundCastTail>
+                    </value>
+                </li>
+
+                <li Class="PatchOperationRemove">
+				   <xpath>Defs/ThingDef[defName="Gun_AssaultRifle_NM"]/comps/li[@Class="CombatExtended.CompProperties_AmmoUser"]</xpath>
+                </li>
+
+			</operations>
+			</match>
+			</li>
+		</operations>
+	</Operation>
+</Patch>

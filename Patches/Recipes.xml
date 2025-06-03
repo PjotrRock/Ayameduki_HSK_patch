@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<!--VanometricPowerCell-->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/RecipeDef[defName="HAR_RQ_Recipe_a"]/ingredients</xpath>
+		<value>
+			<ingredients inherit="false">
+				<li>
+					<filter>
+						<thingDefs>
+							<li>HAR_RQ_Item_a</li>
+						</thingDefs>
+					</filter>
+					<count>3</count>
+				</li>
+				<li>
+					<filter>
+						<thingDefs>
+							<li>ComponentIndustrial</li>
+						</thingDefs>
+					</filter>
+					<count>20</count>
+				</li>
+				<li>
+					<filter>
+						<thingDefs>
+							<li>TitaniumBar</li>
+						</thingDefs>
+					</filter>
+					<count>60</count>
+				</li>
+				<li>
+					<filter>
+						<thingDefs>
+							<li>Microchips</li>
+						</thingDefs>
+					</filter>
+					<count>11</count>
+				</li>
+				<li>
+					<filter>
+						<thingDefs>
+							<li>FuelRodsMOX</li>
+						</thingDefs>
+					</filter>
+					<count>8</count>
+				</li>
+				<li>
+					<filter>
+						<thingDefs>
+							<li>MagneticMaterial</li>
+						</thingDefs>
+					</filter>
+					<count>32</count>
+				</li>
+			</ingredients>
+		</value>
+	</Operation>
+
+</Patch>

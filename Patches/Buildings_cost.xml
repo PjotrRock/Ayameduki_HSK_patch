@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="BMOT_Building_Recycle_a"]/costList</xpath>
+		<value>
+			<costList>
+				<AluminiumBar>120</AluminiumBar>
+				<Glass>20</Glass>
+				<ComponentIndustrial>4</ComponentIndustrial>
+			</costList>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationRemove">
+		<xpath>Defs/ThingDef[@Name="BMOT_Building_MailOrderTerminal_Base"]/costStuffCount</xpath>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[@Name="BMOT_Building_MailOrderTerminal_Base"]/costList</xpath>
+		<value>
+			<costList>
+				<Glass>20</Glass>
+				<Plastic>24</Plastic>
+				<Electronics>4</Electronics>
+				<ComponentIndustrial>4</ComponentIndustrial>
+			</costList>
+			<stuffCategories>
+				<li>Metallic</li>
+			</stuffCategories>
+			<costStuffCount>115</costStuffCount>
+		</value>
+	</Operation>
+	<!--
+	<Operation Class="PatchOperationAdd">
+		<xpath>
+			Defs/ThingDef[
+			defName="BMOT_Building_MailOrderTerminal_Food" or
+			defName="BMOT_Building_MailOrderTerminal_Material" or
+			defName="BMOT_Building_MailOrderTerminal_Furniture" or
+			defName="BMOT_Building_MailOrderTerminal_Animal" or
+			defName="BMOT_Building_MailOrderTerminal_Slave" ]</xpath>
+		<value>
+			<costList inherit="false">
+				<Glass>20</Glass>
+				<Plastic>24</Plastic>
+				<Electronics>4</Electronics>
+				<ComponentIndustrial>4</ComponentIndustrial>
+			</costList>
+			<stuffCategories>
+				<li>Metallic</li>
+			</stuffCategories>
+			<costStuffCount>115</costStuffCount>
+		</value>
+	</Operation>
+	-->
+</Patch>

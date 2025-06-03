@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<!--Shell-->
+	<Operation Class="SK.PatchOperationReplaceExtended">
+		<xpath>
+			Defs/ThingDef[
+			defName="HAR_SL_Shell_a" or
+			defName="HAR_SL_Shell_b" or
+			defName="HAR_SL_Shell_c"
+			]
+		</xpath>
+		<value>
+			<costList>
+				<ComponentIndustrial>4</ComponentIndustrial>
+				<Compaste>12</Compaste>
+			</costList>
+			<stuffCategories>
+				<li>HF</li>
+				<li>Leathery</li>
+				<li>Fabric</li>
+			</stuffCategories>
+			<costStuffCount>80</costStuffCount>
+			<statBases>
+				<WorkToMake>6560</WorkToMake>
+				<MaxHitPoints>75</MaxHitPoints>
+				<Mass>6</Mass>
+				<Bulk>8</Bulk>
+				<WornBulk>6</WornBulk>
+				<Flammability>1</Flammability>
+				<ArmorRating_Sharp>1.2</ArmorRating_Sharp>
+				<ArmorRating_Blunt>2.2</ArmorRating_Blunt>
+				<ArmorRating_Heat>0.2</ArmorRating_Heat>
+				<StuffEffectMultiplierArmor>4</StuffEffectMultiplierArmor>
+				<Insulation_Heat>4</Insulation_Heat>
+				<Insulation_Cold>2</Insulation_Cold>
+				<StuffEffectMultiplierInsulation_Cold>0.2</StuffEffectMultiplierInsulation_Cold>
+				<StuffEffectMultiplierInsulation_Heat>0.2</StuffEffectMultiplierInsulation_Heat>
+				<EquipDelay>4</EquipDelay>
+			</statBases>
+			<equippedStatOffsets>
+				<MoveSpeed>-0.2</MoveSpeed>
+				<WorkSpeedGlobal>-0.08</WorkSpeedGlobal>
+				<ToxicEnvironmentResistance>0.2</ToxicEnvironmentResistance>
+				<GermResistance>0.11</GermResistance>
+				<GermContainment>0.16</GermContainment>
+			</equippedStatOffsets>
+		</value>
+	</Operation>
+
+	<!--middle-->
+	<Operation Class="SK.PatchOperationReplaceExtended">
+		<xpath>
+			Defs/ThingDef[
+			defName="HAR_SL_Tops_a" or
+			defName="HAR_SL_Tops_b" or
+			defName="HAR_SL_Tops_c"
+			]
+		</xpath>
+		<value>
+			<costList>
+				<ComponentIndustrial>2</ComponentIndustrial>
+			</costList>
+			<stuffCategories>
+				<li>HF</li>
+				<li>Leathery</li>
+				<li>Fabric</li>
+			</stuffCategories>
+			<costStuffCount>60</costStuffCount>
+			<statBases>
+				<WorkToMake>4560</WorkToMake>
+				<MaxHitPoints>55</MaxHitPoints>
+				<Mass>3</Mass>
+				<Bulk>6</Bulk>
+				<WornBulk>3</WornBulk>
+				<Flammability>0.8</Flammability>
+				<ArmorRating_Sharp>1.2</ArmorRating_Sharp>
+				<ArmorRating_Blunt>2.2</ArmorRating_Blunt>
+				<ArmorRating_Heat>0.2</ArmorRating_Heat>
+				<StuffEffectMultiplierArmor>4</StuffEffectMultiplierArmor>
+				<Insulation_Heat>4</Insulation_Heat>
+				<Insulation_Cold>2</Insulation_Cold>
+				<StuffEffectMultiplierInsulation_Cold>0.2</StuffEffectMultiplierInsulation_Cold>
+				<StuffEffectMultiplierInsulation_Heat>0.2</StuffEffectMultiplierInsulation_Heat>
+				<EquipDelay>4</EquipDelay>
+			</statBases>
+			<equippedStatOffsets>
+				<MoveSpeed>0.1</MoveSpeed>
+				<ToxicEnvironmentResistance>0.2</ToxicEnvironmentResistance>
+				<GermResistance>0.11</GermResistance>
+				<GermContainment>0.16</GermContainment>
+			</equippedStatOffsets>
+		</value>
+	</Operation>
+
+
+	<!--Overhead-->
+	<Operation Class="SK.PatchOperationReplaceExtended">
+		<xpath>
+			Defs/ThingDef[
+			defName="HAR_SL_Heads_a" or
+			defName="HAR_SL_Heads_b" or
+			defName="HAR_SL_Heads_c"
+			]
+		</xpath>
+		<value>
+			<costList>
+				<ComponentIndustrial>2</ComponentIndustrial>
+			</costList>
+			<stuffCategories>
+				<li>HF</li>
+				<li>Leathery</li>
+				<li>Fabric</li>
+			</stuffCategories>
+			<costStuffCount>30</costStuffCount>
+			<statBases>
+				<WorkToMake>2210</WorkToMake>
+				<MaxHitPoints>45</MaxHitPoints>
+				<Mass>3</Mass>
+				<Bulk>6</Bulk>
+				<WornBulk>3</WornBulk>
+				<Flammability>0.8</Flammability>
+				<ArmorRating_Sharp>1.2</ArmorRating_Sharp>
+				<ArmorRating_Blunt>2.2</ArmorRating_Blunt>
+				<ArmorRating_Heat>0.02</ArmorRating_Heat>
+				<StuffEffectMultiplierArmor>1</StuffEffectMultiplierArmor>
+				<Insulation_Heat>4</Insulation_Heat>
+				<Insulation_Cold>2</Insulation_Cold>
+				<StuffEffectMultiplierInsulation_Cold>0.2</StuffEffectMultiplierInsulation_Cold>
+				<StuffEffectMultiplierInsulation_Heat>0.2</StuffEffectMultiplierInsulation_Heat>
+				<EquipDelay>4</EquipDelay>
+			</statBases>
+			<equippedStatOffsets>
+				<WorkSpeedGlobal>0.05</WorkSpeedGlobal>
+				<MentalBreakThreshold>-0.05</MentalBreakThreshold>
+				<SocialImpact>0.3</SocialImpact>
+				<GermResistance>0.11</GermResistance>
+				<GermContainment>0.22</GermContainment>
+			</equippedStatOffsets>
+		</value>
+	</Operation>
+
+	<!--skin-->
+	<Operation Class="SK.PatchOperationReplaceExtended">
+		<xpath>
+			Defs/ThingDef[defName="HAR_SL_O_a"]
+		</xpath>
+		<value>
+			<stuffCategories>
+				<li>HF</li>
+				<li>Leathery</li>
+				<li>Fabric</li>
+			</stuffCategories>
+			<costStuffCount>24</costStuffCount>
+			<statBases>
+				<WorkToMake>1410</WorkToMake>
+				<MaxHitPoints>45</MaxHitPoints>
+				<Mass>0.2</Mass>
+				<Bulk>2</Bulk>
+				<WornBulk>0.2</WornBulk>
+				<Flammability>0.8</Flammability>
+				<ArmorRating_Sharp>0.2</ArmorRating_Sharp>
+				<ArmorRating_Blunt>0.5</ArmorRating_Blunt>
+				<ArmorRating_Heat>0.012</ArmorRating_Heat>
+				<StuffEffectMultiplierArmor>0.2</StuffEffectMultiplierArmor>
+				<Insulation_Heat>4</Insulation_Heat>
+				<Insulation_Cold>4</Insulation_Cold>
+				<StuffEffectMultiplierInsulation_Cold>0.2</StuffEffectMultiplierInsulation_Cold>
+				<StuffEffectMultiplierInsulation_Heat>0.2</StuffEffectMultiplierInsulation_Heat>
+				<EquipDelay>4</EquipDelay>
+			</statBases>
+			<equippedStatOffsets>
+				<MentalBreakThreshold>-0.08</MentalBreakThreshold>
+				<NegotiationAbility>0.20</NegotiationAbility>
+				<GermResistance>0.06</GermResistance>
+				<GermContainment>0.10</GermContainment>
+			</equippedStatOffsets>
+		</value>
+	</Operation>
+
+
+
+</Patch>

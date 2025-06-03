@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	
+
+	<!--Arche Cartridge-->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="HAR_IA_Item_ArcheCartridge"]/costList</xpath>
+		<value>
+			<costList inherit="false">
+				<TitaniumBar>10</TitaniumBar>
+				<LeadBar>5</LeadBar>
+				<ComponentAdvanced>2</ComponentAdvanced>
+				<MagneticMaterial>2</MagneticMaterial>
+				<Hexcell>4</Hexcell>
+			</costList>
+		</value>
+	</Operation>
+
+	<!--Technerelic-->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="HAR_IA_Item_b"]/costList</xpath>
+		<value>
+			<costList inherit="false">
+				<TitaniumBar>40</TitaniumBar>
+				<HAR_IA_Item_a>10</HAR_IA_Item_a>
+				<ComponentAdvanced>2</ComponentAdvanced>
+				<AdvMechanism>2</AdvMechanism>
+			</costList>
+		</value>
+	</Operation>
+
+	<!--ideasensor-->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="HAR_IA_Item_c"]/costList</xpath>
+		<value>
+			<costList inherit="false">
+				<HAR_IA_Item_b>60</HAR_IA_Item_b>
+				<ComponentSpacer>10</ComponentSpacer>
+				<ReinforcedGlass>30</ReinforcedGlass>
+				<Microchips>5</Microchips>
+				<MagneticMaterial>8</MagneticMaterial>
+				<Hexcell>6</Hexcell>
+		</costList>
+		</value>
+	</Operation>
+	
+	<!--genesis reactor-->
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="HAR_IA_Item_d"]/costList</xpath>
+		<value>
+			<costList inherit="false">
+				<HAR_IA_Item_b>150</HAR_IA_Item_b>
+				<Plutonium>60</Plutonium>
+				<BioMicrochips>4</BioMicrochips>
+				<MagneticMaterial>22</MagneticMaterial>
+				<Hexcell>8</Hexcell>
+				<LeadBar>25</LeadBar>
+			</costList>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="HAR_IA_Item_spawn_Laches_a"]/costList</xpath>
+		<value>
+			<costList inherit="false">
+				<HAR_IA_Item_a>50</HAR_IA_Item_a>
+				<BioMicrochips>8</BioMicrochips>
+				<MagneticMaterial>22</MagneticMaterial>
+				<Hexcell>8</Hexcell>
+				<RobotParts>3</RobotParts>
+				<Biomatter>120</Biomatter>
+				<Hyperweave>40</Hyperweave>
+				<TechprofSubpersonaCore>1</TechprofSubpersonaCore>
+			</costList>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="HAR_IA_Item_spawn_Charmides_a"]/costList</xpath>
+		<value>
+			<costList inherit="false">
+				<HAR_IA_Item_b>70</HAR_IA_Item_b>
+				<BioMicrochips>12</BioMicrochips>
+				<MagneticMaterial>22</MagneticMaterial>
+				<Hexcell>12</Hexcell>
+				<RobotParts>4</RobotParts>
+				<Biomatter>120</Biomatter>
+				<Hyperweave>60</Hyperweave>
+				<Kevlar>40</Kevlar>
+			</costList>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="HAR_IA_Item_spawn_Charmides_b"]/costList</xpath>
+		<value>
+			<costList inherit="false">
+				<HAR_IA_Item_b>70</HAR_IA_Item_b>
+				<BioMicrochips>12</BioMicrochips>
+				<MagneticMaterial>22</MagneticMaterial>
+				<Hexcell>12</Hexcell>
+				<RobotParts>4</RobotParts>
+				<Biomatter>120</Biomatter>
+				<Hyperweave>80</Hyperweave>
+				<Kevlar>20</Kevlar>
+			</costList>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="HAR_IA_Item_spawn_Menexenus_a"]/costList</xpath>
+		<value>
+			<costList inherit="false">
+				<HAR_IA_Item_c>2</HAR_IA_Item_c>
+				<BioMicrochips>12</BioMicrochips>
+				<MagneticMaterial>36</MagneticMaterial>
+				<Hexcell>18</Hexcell>
+				<RobotParts>6</RobotParts>
+				<Biomatter>180</Biomatter>
+				<Hyperweave>40</Hyperweave>
+				<BiosyntheticMaterial>20</BiosyntheticMaterial>
+				<Kevlar>20</Kevlar>
+				<TechprofSubpersonaCore>1</TechprofSubpersonaCore>
+			</costList>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="HAR_IA_Item_spawn_Menexenus_b"]/costList</xpath>
+		<value>
+			<costList inherit="false">
+				<HAR_IA_Item_c>2</HAR_IA_Item_c>
+				<BioMicrochips>12</BioMicrochips>
+				<MagneticMaterial>36</MagneticMaterial>
+				<Hexcell>18</Hexcell>
+				<RobotParts>6</RobotParts>
+				<Biomatter>180</Biomatter>
+				<Hyperweave>40</Hyperweave>
+				<BiosyntheticMaterial>20</BiosyntheticMaterial>
+				<Kevlar>20</Kevlar>
+				<TechprofSubpersonaCore>1</TechprofSubpersonaCore>
+			</costList>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="HAR_IA_Item_spawn_Theaetetus_a"]/costList</xpath>
+		<value>
+			<costList inherit="false">
+				<HAR_IA_Item_c>4</HAR_IA_Item_c>
+				<HAR_IA_Item_d>1</HAR_IA_Item_d>
+				<BioMicrochips>12</BioMicrochips>
+				<MagneticMaterial>36</MagneticMaterial>
+				<Hexcell>18</Hexcell>
+				<RobotParts>8</RobotParts>
+				<Biomatter>180</Biomatter>
+				<Hyperweave>40</Hyperweave>
+				<BiosyntheticMaterial>20</BiosyntheticMaterial>
+				<Kevlar>20</Kevlar>
+				<TechprofSubpersonaCore>1</TechprofSubpersonaCore>
+				<AIPersonaCore>1</AIPersonaCore>
+				<Luciferium>16</Luciferium>
+			</costList>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="HAR_IA_Item_spawn_Theaetetus_b"]/costList</xpath>
+		<value>
+			<costList inherit="false">
+				<HAR_IA_Item_c>4</HAR_IA_Item_c>
+				<HAR_IA_Item_d>1</HAR_IA_Item_d>
+				<BioMicrochips>12</BioMicrochips>
+				<MagneticMaterial>36</MagneticMaterial>
+				<Hexcell>18</Hexcell>
+				<RobotParts>8</RobotParts>
+				<Biomatter>180</Biomatter>
+				<Hyperweave>40</Hyperweave>
+				<BiosyntheticMaterial>20</BiosyntheticMaterial>
+				<Kevlar>20</Kevlar>
+				<TechprofSubpersonaCore>1</TechprofSubpersonaCore>
+				<AIPersonaCore>1</AIPersonaCore>
+				<Luciferium>16</Luciferium>
+			</costList>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="HAR_IA_Item_spawn_Critias"]/costList</xpath>
+		<value>
+			<costList inherit="false">
+				<HAR_IA_Item_c>24</HAR_IA_Item_c>
+				<HAR_IA_Item_d>11</HAR_IA_Item_d>
+				<BioMicrochips>12</BioMicrochips>
+				<MagneticMaterial>36</MagneticMaterial>
+				<Hexcell>18</Hexcell>
+				<RobotParts>8</RobotParts>
+				<Biomatter>180</Biomatter>
+				<Hyperweave>40</Hyperweave>
+				<BiosyntheticMaterial>20</BiosyntheticMaterial>
+				<Kevlar>20</Kevlar>
+				<TechprofSubpersonaCore>4</TechprofSubpersonaCore>
+				<AIPersonaCore>1</AIPersonaCore>
+				<Luciferium>69</Luciferium>
+			</costList>
+		</value>
+	</Operation>
+</Patch>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="BOSS_RQ_Hive_Requeen"]/killedLeavings</xpath>
+		<value>
+			<killedLeavings inherit="false">
+				<TitaniumBar>350</TitaniumBar>
+				<HAR_IA_Item_a>400</HAR_IA_Item_a>
+				<HAR_IA_Item_b>50</HAR_IA_Item_b>
+			</killedLeavings>
+		</value>
+	</Operation>
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="BOSS_RQ_Hive_Requeen_b"]/killedLeavings</xpath>
+		<value>
+			<killedLeavings inherit="false">
+				<HAR_RQ_Art_a>1</HAR_RQ_Art_a>
+				<TitaniumBar>850</TitaniumBar>
+				<HAR_IA_Item_a>2200</HAR_IA_Item_a>
+				<HAR_IA_Item_b>120</HAR_IA_Item_b>
+			</killedLeavings>
+		</value>
+	</Operation>
+</Patch>

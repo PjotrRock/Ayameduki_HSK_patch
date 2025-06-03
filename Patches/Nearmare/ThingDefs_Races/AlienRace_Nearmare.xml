@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+<!--
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[@Name="HAR_Nearmaere_BasePawn"]/inspectorTabs/li[.="ITab_Pawn_Gear"]</xpath>
+		<value>
+			<li>CombatExtended.ITab_Inventory</li>
+		</value>
+	</Operation>
+-->
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[@Name="HAR_Nearmaere_BasePawn"]/comps</xpath>
+		<value>
+			<li Class="CombatExtended.CompProperties_Inventory"/>
+			<li Class="CombatExtended.CompProperties_TacticalManager"/>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[@Name="HAR_Nearmaere_BasePawn"]/comps</xpath>
+		<value>
+			<li>
+				<compClass>CombatExtended.CompPawnGizmo</compClass>
+			</li>
+			<li Class="CombatExtended.CompProperties_Suppressable"/>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAddModExtension">
+		<xpath>Defs/AlienRace.ThingDef_AlienRace[@Name="HAR_Nearmaere_Base"]</xpath>
+		<value>
+			<li Class="CombatExtended.RacePropertiesExtensionCE">
+				<bodyShape>Humanoid</bodyShape>
+			</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/AlienRace.ThingDef_AlienRace[@Name="HAR_Nearmaere_Base"]/statBases</xpath>
+		<value>
+			<Suppressability>1</Suppressability>
+			<SmokeSensitivity>1.2</SmokeSensitivity>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/AlienRace.ThingDef_AlienRace[@Name="HAR_Nearmaere_Base"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>left fist</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>1</power>
+					<cooldownTime>1.33</cooldownTime>
+					<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+					<armorPenetrationBlunt>0.162</armorPenetrationBlunt>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>right fist</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>1</power>
+					<cooldownTime>1.33</cooldownTime>
+					<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+					<armorPenetrationBlunt>0.162</armorPenetrationBlunt>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>head</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>2</power>
+					<cooldownTime>4.49</cooldownTime>
+					<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+					<chanceFactor>0.2</chanceFactor>
+					<armorPenetrationBlunt>0.625</armorPenetrationBlunt>
+				</li>
+			</tools>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/AlienRace.ThingDef_AlienRace[@Name="HAR_Nearmaere_Base"]/alienRace/raceRestriction/whiteApparelList</xpath>
+		<value>
+			<li>CE_Apparel_TacVest</li>
+			<li>CE_Apparel_Backpack</li>
+			<li>CE_Apparel_TribalBackpack</li>
+			<li>CE_Apparel_BallisticShield</li>
+			<li>CE_Apparel_ImprovGasMask</li>
+			<li>HAR_NM_Os_Pg</li>
+			<li>HAR_NM_Wear_r</li>
+			<li>HAR_NM_Sh_r</li>
+			<li>HAR_NM_AH_r</li>
+			<!--gloves-->
+			<li>Apparello_chefglove</li>
+			<li>Apparello_Workglove</li>
+			<li>MedievalTimes_Gloves_Plated</li>
+			<li>MedievalTimes_Gauntlets</li>
+			<li>Apparello_ReinforcedGlove</li>
+			<li>Apparello_Motorglove</li>
+			<li>MedievalTimes_Gloves_Combat</li>
+			<li>Apparello_Snipeglove</li>
+			<li>Apparello_SoothingLove</li>
+			<li>Apparello_docglove</li>
+			<li>Apparello_docglovetwo</li>
+			<li>Apparello_Snipeglovetwo</li>
+			<li>Apparello_CalmingLove</li>
+			<li>MedievalTimes_Gauntlets_Techno</li>
+			<li>Apparello_Gamerglove</li>
+			<!--boots-->
+			<li>Apparello_Clawboots</li>
+			<li>Apparello_Shoes</li>
+			<li>MedievalTimes_Boots_Steel_Plated</li>
+			<li>Apparello_MetalBoots</li>
+			<li>Apparello_Snowboots</li>
+			<li>Apparello_NorbalMuffshoes</li>
+			<li>Apparello_Boots</li>
+			<li>MedievalTimes_Boots_Combat</li>
+			<li>MedievalTimes_Boots_Techno</li>
+			<li>Apparello_Spboots</li>
+			<!--belts-->
+			<li>Apparel_ShieldBelt</li>
+			<li>Apparello_SheildGaurdian</li>
+		</value>
+	</Operation>
+</Patch>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Ayameduki Races HSK</name>
+  <author>PjotrRock</author>
+  <supportedVersions>
+	<li>1.5</li>
+  </supportedVersions>
+  <packageId>ayamedukiracece.HSKpatch</packageId>
+  <description>Patches Ayameduki Races for HSK. Balance is near.</description>
+  <loadAfter>
+    <li>CETeam.CombatExtended</li>
+    <li>ayameduki.haridhale</li>
+    <li>ayameduki.haridhaleex</li>
+    <li>ayameduki.bossrequeen</li>
+  </loadAfter>
+</ModMetaData>
